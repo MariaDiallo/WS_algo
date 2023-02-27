@@ -1,0 +1,28 @@
+ALGORITHM sentence
+VAR
+    phrase:STRING;
+    compt-car,compt-words,compt-vowels:INTEGER;
+BEGIN
+    compt-car:=0;
+    compt-words:=0;
+    compt-vowels
+    Write(Entrer une phrase)
+    Read(phrase)
+    FOR i FROM 0 TO phrase.length - 1 DO
+        compt-car:=compt-car+1;
+    END_FOR
+    Write(compt-car)
+    IF (i=" ") THEN
+       compt-words:=comp-words+1;
+    END_IF
+    Write(compt-words)
+    SWITCH (phrase[i]) DO
+        case a : compt-vowels = compt-vowels +1;
+        case i : compt-vowels = compt-vowels +1;
+        case o : compt-vowels = compt-vowels +1;
+        case u : compt-vowels = compt-vowels +1;
+        case e : compt-vowels = compt-vowels +1; BREAK;
+        default : Write("not vowel"); BREAK;
+    END_SWITCH
+    Write(compt-vowels)
+END
